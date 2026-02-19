@@ -49,11 +49,3 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
         
-
-        run: |
-          cd chart-repo
-          git config --global user.name "sonnhfit"
-          git config --global user.email "sonnhfit@gmail.com"
-          git add .
-          git commit -m "chore: update my-sonagent image tag to ${{ steps.get_commit_hash.outputs.COMMIT_HASH }}"
-          git push origin main
