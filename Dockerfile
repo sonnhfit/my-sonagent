@@ -4,7 +4,7 @@ WORKDIR /sonagent
 
 COPY requirements.txt .
 COPY user_data /sonagent/user_data
-COPY user_data/tools/. /sonagent/user_data/tools/
+COPY user_data/tools/web_crawl.py /sonagent/user_data/tools/web_crawl.py
 
 RUN pip install --no-cache-dir -r requirements.txt
 
